@@ -40,13 +40,14 @@
             text-align: center;
         }
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            justify-items: center;
         }
         .gallery img {
-            width: 300px;
-            margin: 10px;
+            width: 100%;
+            max-width: 300px;
             border-radius: 8px;
             cursor: pointer;
             transition: transform 0.2s; /* Smooth zoom effect */
@@ -131,7 +132,7 @@
     </section>
 
     <section id="gallery" class="gallery">
-        <h2>Galeria<br></h2>
+        <h2>Galeria</h2>
         <!-- Adicione suas imagens aqui -->
         <img src="20240420-_DSC0893-Enhanced-NR.jpg" alt="Sunset Rides" onclick="openModal(this)">
         <img src="20240501-_DSC1698.jpg" alt="In the middle of the Wilderness" onclick="openModal(this)">
